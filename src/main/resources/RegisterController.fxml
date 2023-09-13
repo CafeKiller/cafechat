@@ -14,14 +14,14 @@
                 <Label text="注册" styleClass="h3,b"/>
                 <Pane HBox.hgrow="ALWAYS"/>
                 <Label text="使用账号"/>
-<!--                <Hyperlink text="登录" onAction="#onLoginClick"/>-->
+                <Hyperlink text="登录" onAction="#onLoginClick"/>
             </children>
             <padding>
                 <Insets left="20.0" right="20.0"/>
             </padding>
         </HBox>
         <StackPane fx:id="formStackPane"/>
-<!--        <Button minWidth="120" text="注册" styleClass="btn-primary" onAction="#onRegisterClick"/>-->
+        <Button minWidth="120" text="注册" styleClass="btn-primary" onAction="#onRegisterClick"/>
     </children>
     <padding>
         <Insets bottom="30.0" left="30.0" right="30.0" top="5.0"/>

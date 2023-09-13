@@ -2,11 +2,11 @@ package com.cafe.fx.wx.view.register;
 
 import com.cafe.fx.wx.core.FX;
 import com.cafe.fx.wx.core.FXContext;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
 
-import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -19,7 +19,8 @@ public class RegisterController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        initializeUI();
+        initializeEvent();
     }
 
     /* 初始化UI */

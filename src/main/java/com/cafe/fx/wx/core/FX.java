@@ -16,7 +16,7 @@ public class FX {
         String uri = "/"+controller.getSimpleName()+".fxml";
 
         try{
-            System.out.println("-----------------------------");
+            System.out.println("---------页面正在加载中-----------");
             return FXMLLoader.load(Objects.requireNonNull(controller.getResource(uri)));
         }catch (IOException e){
             throw new RuntimeException(e);
@@ -24,7 +24,7 @@ public class FX {
     }
 
     public static void info(String message){
-//        info(message);
+        info(message, FXContext.getPrimaryStage());
     }
 
     public static void info(String message, Stage owner){
