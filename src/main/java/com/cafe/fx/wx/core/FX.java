@@ -13,8 +13,10 @@ public class FX {
 
 
     public static Parent fxml(Class<? extends Initializable> controller){
-        String uri = "/" + controller.getName().replace(".", "/")+".fxml";
+        String uri = "/"+controller.getSimpleName()+".fxml";
+
         try{
+            System.out.println("-----------------------------");
             return FXMLLoader.load(Objects.requireNonNull(controller.getResource(uri)));
         }catch (IOException e){
             throw new RuntimeException(e);
