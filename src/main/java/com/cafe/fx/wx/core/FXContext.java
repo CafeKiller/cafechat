@@ -6,6 +6,8 @@ import javafx.stage.Stage;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/* FX上下文容器 */
 public class FXContext {
 
     private static final Map<String, Object> cache = new HashMap<>();

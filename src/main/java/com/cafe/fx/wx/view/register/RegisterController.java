@@ -34,10 +34,12 @@ public class RegisterController implements Initializable {
 
     }
 
+    /* 点击登录事件 */
     public void onLoginClick(ActionEvent actionEvent){
         System.out.println("当前功能开发中......");
     }
 
+    /* 点击注册事件 */
     public void onRegisterClick(ActionEvent actionEvent){
         form.getForm().persist();
 

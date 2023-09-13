@@ -18,7 +18,10 @@ public class RegisterForm {
 
     }
 
-    /* 获取单例 */
+    /**
+     * 获取单例
+     * 单例模式: 保证表单的全局唯一性
+     * */
     public static RegisterForm getInstance() {
         RegisterForm rf = new RegisterForm();
         rf.build();
@@ -30,6 +33,7 @@ public class RegisterForm {
         String nickname = "昵称";
         String username = "账号";
         String password = "密码";
+        /* placeholder提示信息 */
         String placeholderTextFmt = "请输入 %s";
         String requiredTextFmt = "%s 必填";
 

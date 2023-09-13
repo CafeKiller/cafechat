@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/* 应用启动类 */
 public class AppStarter {
 
     public static void start(Stage primaryStage){

@@ -9,9 +9,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/* FX核心工具类 */
 public class FX {
 
 
+    /* 加载fxml文件 */
     public static Parent fxml(Class<? extends Initializable> controller){
         String uri = "/"+controller.getSimpleName()+".fxml";
 
@@ -27,6 +29,7 @@ public class FX {
         info(message, FXContext.getPrimaryStage());
     }
 
+    /* 弹窗 提示信息 */
     public static void info(String message, Stage owner){
         Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
 
