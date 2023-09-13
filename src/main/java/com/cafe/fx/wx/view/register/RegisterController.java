@@ -1,5 +1,7 @@
 package com.cafe.fx.wx.view.register;
 
+import com.cafe.fx.wx.core.FX;
+import com.cafe.fx.wx.core.FXContext;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
@@ -39,7 +41,7 @@ public class RegisterController implements Initializable {
         form.getForm().persist();
 
         if (form.getForm().isValid()){
-
+            FX.info(form.getVo().getUsername() +"注册成功, 欢迎欢迎");
         }
     }
 

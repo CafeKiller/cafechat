@@ -1,5 +1,6 @@
 package com.cafe.fx.wx.core;
 
+import com.cafe.fx.wx.view.register.view.login.LoginStage;
 import javafx.stage.Stage;
 
 import java.util.HashMap;
@@ -25,7 +26,7 @@ public class FXContext {
         return get(K.PRIMARY_STAGE);
     }
 
-    public static void setPrimaryStage(String primaryStage){
+    public static void setPrimaryStage(Stage primaryStage){
         put(K.PRIMARY_STAGE, primaryStage);
     }
 
@@ -33,8 +34,8 @@ public class FXContext {
         return get(K.LOGIN_STAGE);
     }
 
-    public static void setLoginStage(){
-//        put(K.LOGIN_STAGE, );
+    public static void setLoginStage(LoginStage loginStage){
+        put(K.LOGIN_STAGE, loginStage);
     }
 
 }
