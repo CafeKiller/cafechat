@@ -3,6 +3,7 @@ package com.cafe.fx.wx;
 
 import com.cafe.fx.wx.core.FX;
 import com.cafe.fx.wx.core.FXContext;
+import com.cafe.fx.wx.core.FXIcon;
 import com.cafe.fx.wx.view.register.RegisterController;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,9 +16,10 @@ public class AppStarter {
 
         Parent root = FX.fxml(RegisterController.class);
         primaryStage.setScene(new Scene(root));
-//        primaryStage.getIcons().clear();
-
-
+        primaryStage.getIcons().clear();
+        primaryStage.getIcons().add(FXIcon.logo());
+        primaryStage.setResizable(false);
+        primaryStage.show();
 
     }
 
