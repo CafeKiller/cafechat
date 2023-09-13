@@ -7,6 +7,7 @@ import com.dlsc.formsfx.model.structure.Group;
 import com.dlsc.formsfx.model.structure.PasswordField;
 import com.dlsc.formsfx.view.renderer.FormRenderer;
 
+/* 注册表单构建 */
 public class RegisterForm {
 
     private final RegisterVo vo = new RegisterVo();
@@ -24,7 +25,7 @@ public class RegisterForm {
         return rf;
     }
 
-
+    /* 对外抛出唯一单例 */
     private void build(){
         String nickname = "昵称";
         String username = "账号";
