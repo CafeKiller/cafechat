@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="480.0" spacing="10.0"
+      stylesheets="@/css/bootstrapfx.css"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.cafe.fx.wx.view.login.LoginController">
+    <children>
+        <HBox alignment="CENTER_LEFT">
+            <children>
+                <Label text="登录" styleClass="h3,b"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Hyperlink text="注册" onAction="#onRegisterClick"/>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0"/>
+            </padding>
+        </HBox>
+        <StackPane fx:id="formStackPane"/>
+        <Button minWidth="120" text="登录" styleClass="btn-primary" onAction="#onLoginClick"/>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="5.0"/>
+    </padding>
+</VBox>
+
