@@ -15,7 +15,7 @@ public class FX {
 
     /* 加载fxml文件 */
     public static Parent fxml(Class<? extends Initializable> controller){
-        String uri = "/"+controller.getSimpleName()+".fxml";
+        String uri = "/views/"+controller.getSimpleName()+".fxml";
 
         try{
             System.out.println("---------页面正在加载中-----------");

@@ -1,4 +1,4 @@
-package com.cafe.fx.wx.view.register.view.login;
+package com.cafe.fx.wx.view.login;
 
 import javafx.stage.Stage;
 

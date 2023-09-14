@@ -1,6 +1,6 @@
 package com.cafe.fx.wx.core;
 
-import com.cafe.fx.wx.view.register.view.login.LoginStage;
+import com.cafe.fx.wx.view.login.LoginStage;
 import javafx.stage.Stage;
 
 import java.util.HashMap;
