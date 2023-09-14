@@ -15,10 +15,10 @@ public class FX {
 
     /* 加载fxml文件 */
     public static Parent fxml(Class<? extends Initializable> controller){
-        String uri = "/views/"+controller.getSimpleName()+".fxml";
+        String uri = "/views/" + controller.getSimpleName() + ".fxml";
 
         try{
-            System.out.println("---------页面正在加载中-----------");
+            System.out.printf(">>>>>>>>>>> %s 页面正在加载中......\n", controller.getSimpleName());
             return FXMLLoader.load(Objects.requireNonNull(controller.getResource(uri)));
         }catch (IOException e){
             throw new RuntimeException(e);

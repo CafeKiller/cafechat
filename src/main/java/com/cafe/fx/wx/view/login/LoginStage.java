@@ -1,8 +1,13 @@
 package com.cafe.fx.wx.view.login;
 
+import com.cafe.fx.wx.core.FXComponent;
 import com.cafe.fx.wx.core.FXContext;
 import com.cafe.fx.wx.core.FXIcon;
+import javafx.application.ConditionalFeature;
+import javafx.application.Platform;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class LoginStage extends Stage {
 
@@ -13,6 +18,11 @@ public class LoginStage extends Stage {
     public static LoginStage build(){
         LoginStage stage = new LoginStage();
         stage.setTitle("CAFE Chat bate");
+
+        stage.setScene(new Scene(FXComponent.login()));
+        if (Platform.isSupported(ConditionalFeature.EFFECT)){
+            stage.initStyle(StageStyle.UNIFIED);
+        }
 
         /* 设置Login页面参数 */
         stage.getIcons().clear();
