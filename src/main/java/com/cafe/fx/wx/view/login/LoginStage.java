@@ -21,6 +21,7 @@ public class LoginStage extends Stage {
 
         stage.setScene(new Scene(FXComponent.login()));
 
+        // 判断平台是否支持 EFFECT 效果, 若支持则初始化为unified样式(即无样式)
         if (Platform.isSupported(ConditionalFeature.EFFECT)){
             stage.initStyle(StageStyle.UNIFIED);
         }
