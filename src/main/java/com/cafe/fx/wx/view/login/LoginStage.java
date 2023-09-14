@@ -20,6 +20,7 @@ public class LoginStage extends Stage {
         stage.setTitle("CAFE Chat bate");
 
         stage.setScene(new Scene(FXComponent.login()));
+
         if (Platform.isSupported(ConditionalFeature.EFFECT)){
             stage.initStyle(StageStyle.UNIFIED);
         }

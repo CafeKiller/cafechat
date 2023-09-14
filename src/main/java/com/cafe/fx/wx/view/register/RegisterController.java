@@ -44,10 +44,10 @@ public class RegisterController implements Initializable {
 
     /* 点击注册事件 */
     public void onRegisterClick(ActionEvent actionEvent){
-        // 判断表单是否存在
+        // 获取并保存表单的值
         form.getForm().persist();
 
-        // 判断表单信息是否合法有效
+        // 判断表单中的值是否有效且合法
         if (form.getForm().isValid()){
             FX.info(form.getVo().getUsername() +"注册成功, 欢迎欢迎", FXContext.getLoginStage());
             onLoginClick(actionEvent);

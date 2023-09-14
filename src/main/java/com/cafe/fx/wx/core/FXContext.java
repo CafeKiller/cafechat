@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-/* FX上下文容器 */
+/* FX上下文容器管理对象 */
 public class FXContext {
 
     private static final Map<String, Object> cache = new HashMap<>();

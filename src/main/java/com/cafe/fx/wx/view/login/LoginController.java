@@ -39,7 +39,10 @@ public class LoginController implements Initializable {
     }
 
     public void onLoginClick(ActionEvent actionEvent){
+        // 获取并保存表单的值
         form.getForm().persist();
+
+        // 判断表单中的值是否有效且合法
         if (form.getForm().isValid()){
             /* 关闭当前登录页面, 同时打开主页面 */
             FXContext.getLoginStage().close();
