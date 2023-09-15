@@ -31,7 +31,9 @@ public class MainController implements Initializable {
         initializeEvent();
     }
 
+    /* 初始化UI */
     void initializeUI(){
+        // 创建左边菜单栏分组, 并绑定上对应事件
         ToggleGroup leftMenuToggleGroup = new ToggleGroup();
         chatButton.setToggleGroup(leftMenuToggleGroup);
         contactsButton.setToggleGroup(leftMenuToggleGroup);
@@ -42,17 +44,22 @@ public class MainController implements Initializable {
 
     }
 
+    // 点击切换至对话列表事件
     public void onChatClick(ActionEvent actionEvent){
         listVBox.getChildren().clear();
         listVBox.getChildren().add(FXComponent.chatListController());
     }
+    // 点击切换至好友列表事件
     public void onContactsClick(ActionEvent actionEvent){
         listVBox.getChildren().clear();
         listVBox.getChildren().add(FXComponent.contactsListController());
     }
+    /* 自定最小化事件 */
     public void onMinimizeClick(ActionEvent actionEvent){
         FXContext.getPrimaryStage().setIconified(true);
     }
+
+    /* 自定义退出时间 */
     public void onExitClick(ActionEvent actionEvent){
         Optional.ofNullable(FXContext.getPrimaryStage().getOnCloseRequest())
                 .ifPresent(e-> e.handle(new WindowEvent(FXContext.getPrimaryStage(), WindowEvent.WINDOW_CLOSE_REQUEST )));

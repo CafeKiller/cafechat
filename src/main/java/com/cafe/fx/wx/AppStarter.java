@@ -20,18 +20,20 @@ public class AppStarter {
     public static void start(Stage primaryStage){
         FXContext.setPrimaryStage(primaryStage);
 
-        /* 临时获取一个窗格布局 并设置临时文字 */
+        /* 测试登录: 临时设置一个主页 并设置临时文字 */
        /* BorderPane root = new BorderPane();
         root.setCenter(new Label("Cafe Chat"));*/
 
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
         Parent root = FX.fxml(MainController.class);
         FX.drag(primaryStage, root);
 
+        // 测试RegisterController
         // Parent root = FX.fxml(RegisterController.class);
 
         // 设置当前主容器为root
         primaryStage.setScene(new Scene(root));
+        // 关闭掉windows默认的窗体外壳效果, 使用自定义最小化和关闭按钮
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         // 清除默认icon, 并重新设置icon
         primaryStage.getIcons().clear();
         primaryStage.getIcons().add(FXIcon.logo());
