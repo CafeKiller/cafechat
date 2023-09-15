@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<HBox xmlns:fx="http://javafx.com/fxml" stylesheets="@/css/ChatRowController.css" alignment="CENTER" prefHeight="60.0"
+      prefWidth="235.0"
+      spacing="5.0"
+      fx:controller="michong.javafx.wx.view.chat.ChatRowController"
+      fx:id="chatRowHBox">
+    <children>
+        <Pane prefHeight="60.0" prefWidth="48.0">
+            <children>
+                <ImageView fx:id="avatarImageView" fitHeight="40.0" fitWidth="40.0" layoutX="5.0" layoutY="10.0"/>
+                <Label fx:id="messageCountLabel" layoutX="35.0" prefHeight="20.0" styleClass="message-count-label"/>
+            </children>
+        </Pane>
+        <VBox prefWidth="116.0" spacing="4.0" HBox.hgrow="ALWAYS">
+            <children>
+                <Label fx:id="nicknameLabel" styleClass="name-label"/>
+                <Label fx:id="messageLabel" styleClass="message-label"/>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="8.0"/>
+            </padding>
+        </VBox>
+        <VBox alignment="TOP_RIGHT" prefWidth="65.0">
+            <children>
+                <Label fx:id="timestampLabel" styleClass="timestamp-label"/>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0"/>
+            </padding>
+        </VBox>
+    </children>
+</HBox>

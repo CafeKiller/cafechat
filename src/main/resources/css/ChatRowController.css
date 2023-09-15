@@ -1,0 +1,16 @@
+.name-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+.message-count-label {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #ed4014;
+    -fx-background-radius: 10px;
+    -fx-min-width: 20px;
+    -fx-font-size: 10px;
+    -fx-alignment: center;
+}
+.message-label,
+.timestamp-label {
+    -fx-text-fill: derive(#696969, 30%);
+}
