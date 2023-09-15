@@ -1,0 +1,73 @@
+.left-menu {
+    -fx-background-color: #252829;
+}
+
+.chat-button {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
+    -fx-background-size: 32px 32px;
+    -fx-background-image: url("/icon/chat_0.png");
+}
+.chat-button:selected {
+    -fx-background-image: url("/icon/chat_1.png");
+}
+
+.contacts-button {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
+    -fx-background-size: 32px 32px;
+    -fx-background-image: url("/icon/contacts_0.png");
+}
+.contacts-button:selected {
+    -fx-background-image: url("/icon/contacts_1.png");
+}
+
+.setting-button {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
+    -fx-background-size: 32px 32px;
+    -fx-background-image: url("/icon/setting.png");
+}
+
+.top-menu {
+    -fx-background-color: #fafafa;
+}
+
+.minimize-button {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 36px;
+    -fx-pref-height: 30px;
+    -fx-background-size: 36px 30px;
+    -fx-background-image: url("/icon/minimize.png");
+}
+.minimize-button:hover {
+    -fx-background-color: #c0c0c0;
+}
+
+.exit-button {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 36px;
+    -fx-pref-height: 30px;
+    -fx-background-size: 36px 30px;
+    -fx-background-image: url("/icon/exit.png");
+}
+.exit-button:hover {
+    -fx-background-color: #ff4040;
+}
+
+.wx-main #mainPane {
+    -fx-background-color: #fafafa;
+}
