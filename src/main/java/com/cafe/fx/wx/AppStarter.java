@@ -5,6 +5,7 @@ import com.cafe.fx.wx.core.FX;
 import com.cafe.fx.wx.core.FXContext;
 import com.cafe.fx.wx.core.FXIcon;
 import com.cafe.fx.wx.view.login.LoginStage;
+import com.cafe.fx.wx.view.main.MainController;
 import com.cafe.fx.wx.view.register.RegisterController;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,8 +20,11 @@ public class AppStarter {
         FXContext.setPrimaryStage(primaryStage);
 
         /* 临时获取一个窗格布局 并设置临时文字 */
-        BorderPane root = new BorderPane();
-        root.setCenter(new Label("Cafe Chat"));
+       /* BorderPane root = new BorderPane();
+        root.setCenter(new Label("Cafe Chat"));*/
+
+        Parent root = FX.fxml(MainController.class);
+        FX.drag(primaryStage, root);
 
         // Parent root = FX.fxml(RegisterController.class);
 
