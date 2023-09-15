@@ -1,13 +1,18 @@
 package com.cafe.fx.wx.view.main;
 
+import com.cafe.fx.wx.core.FXComponent;
+import com.cafe.fx.wx.core.FXContext;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.WindowEvent;
 
 import javax.swing.text.html.ImageView;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -33,17 +38,20 @@ public class MainController implements Initializable {
 
     }
 
-    public void onChatClick(){
+    public void onChatClick(ActionEvent actionEvent){
         listVBox.getChildren().clear();
-
+        listVBox.getChildren().add(FXComponent.chatListController());
     }
-    public void onContactsClick(){
-
+    public void onContactsClick(ActionEvent actionEvent){
+        listVBox.getChildren().clear();
+        listVBox.getChildren().add(FXComponent.contactsListController());
     }
-    public void onMinimizeClick(){
-
+    public void onMinimizeClick(ActionEvent actionEvent){
+        FXContext.getPrimaryStage().setIconified(true);
     }
-    public void onExitClick(){
-
+    public void onExitClick(ActionEvent actionEvent){
+        Optional.ofNullable(FXContext.getPrimaryStage().getOnCloseRequest())
+                .ifPresent(e-> e.handle(new WindowEvent(FXContext.getPrimaryStage(), WindowEvent.WINDOW_CLOSE_REQUEST )));
+        FXContext.getPrimaryStage().close();
     }
 }
