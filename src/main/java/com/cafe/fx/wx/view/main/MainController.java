@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -31,7 +32,10 @@ public class MainController implements Initializable {
     }
 
     void initializeUI(){
-
+        ToggleGroup leftMenuToggleGroup = new ToggleGroup();
+        chatButton.setToggleGroup(leftMenuToggleGroup);
+        contactsButton.setToggleGroup(leftMenuToggleGroup);
+        onChatClick(null);
     }
 
     void initializeEvent(){

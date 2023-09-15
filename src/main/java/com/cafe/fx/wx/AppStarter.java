@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /* 应用启动类 */
 public class AppStarter {
@@ -23,6 +24,7 @@ public class AppStarter {
        /* BorderPane root = new BorderPane();
         root.setCenter(new Label("Cafe Chat"));*/
 
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         Parent root = FX.fxml(MainController.class);
         FX.drag(primaryStage, root);
 

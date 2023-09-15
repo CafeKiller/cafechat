@@ -37,7 +37,7 @@ public class FX {
                     offsetX = event.getSceneX();
                     offsetY = event.getSceneY();
                 }else if(event.getEventType() == MouseEvent.MOUSE_DRAGGED){
-                    stage.setY(event.getScreenX() - offsetX);
+                    stage.setX(event.getScreenX() - offsetX);
                     if (event.getScreenY() - offsetY < 0){
                         stage.setY(0);
                     }else {
