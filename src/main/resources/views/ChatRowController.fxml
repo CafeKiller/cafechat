@@ -9,7 +9,7 @@
 <HBox xmlns:fx="http://javafx.com/fxml" stylesheets="@/css/ChatRowController.css" alignment="CENTER" prefHeight="60.0"
       prefWidth="235.0"
       spacing="5.0"
-      fx:controller="michong.javafx.wx.view.chat.ChatRowController"
+      fx:controller="com.cafe.fx.wx.view.chat.ChatRowController"
       fx:id="chatRowHBox">
     <children>
         <Pane prefHeight="60.0" prefWidth="48.0">
