@@ -6,11 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.WindowEvent;
 
-import javax.swing.text.html.ImageView;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
