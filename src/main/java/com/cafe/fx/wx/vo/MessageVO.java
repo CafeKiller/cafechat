@@ -6,6 +6,7 @@ public class MessageVO {
 
     private final LongProperty id = new SimpleLongProperty();
     private final StringProperty nickname = new SimpleStringProperty();
+    private final StringProperty avtar = new SimpleStringProperty();
     private final IntegerProperty source = new SimpleIntegerProperty();
     private final StringProperty message = new SimpleStringProperty();
     private final LongProperty timestamp = new SimpleLongProperty();
@@ -82,5 +83,17 @@ public class MessageVO {
 
     public void setMessageCount(int messageCount) {
         this.messageCount.set(messageCount);
+    }
+
+    public String getAvtar() {
+        return avtar.get();
+    }
+
+    public StringProperty avtarProperty() {
+        return avtar;
+    }
+
+    public void setAvtar(String avtar) {
+        this.avtar.set(avtar);
     }
 }

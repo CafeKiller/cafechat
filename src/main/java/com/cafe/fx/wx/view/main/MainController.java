@@ -48,6 +48,8 @@ public class MainController implements Initializable {
     public void onChatClick(ActionEvent actionEvent){
         listVBox.getChildren().clear();
         listVBox.getChildren().add(FXComponent.chatListController());
+        chatButton.setDisable(true);
+        contactsButton.setDisable(false);
     }
     // 点击切换至好友列表事件
     public void onContactsClick(ActionEvent actionEvent){
