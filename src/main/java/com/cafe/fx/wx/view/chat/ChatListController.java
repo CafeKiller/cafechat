@@ -29,6 +29,7 @@ public class ChatListController implements Initializable {
     }
 
     void renderDebugDate(){
+
         MessageVO chatMock = new MessageVO();
         chatMock.setId(1L);
         chatMock.setNickname("ATX-wuying");

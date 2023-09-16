@@ -33,7 +33,7 @@ public class ChatRowController extends ListCell<MessageVO> {
          }
 
          if (Objects.isNull(fxmlLoader)){
-             new FXMLLoader(getClass().getResource("/views/"+getClass().getSimpleName()+".fxml"));
+             fxmlLoader = new FXMLLoader(getClass().getResource("/views/"+getClass().getSimpleName()+".fxml"));
              fxmlLoader.setController(this);
              try {
                  fxmlLoader.load();

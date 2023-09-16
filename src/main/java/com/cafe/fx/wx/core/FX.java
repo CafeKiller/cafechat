@@ -66,4 +66,16 @@ public class FX {
 
     }
 
+    public static void error(String message){
+        error(message,FXContext.getPrimaryStage());
+    }
+
+    public static void error(String message, Stage stage){
+        Alert alert = new Alert(Alert.AlertType.ERROR, message);
+        alert.setGraphic(null);
+        alert.setHeaderText(null);
+        alert.setTitle("错误");
+        alert.show();
+    }
+
 }
