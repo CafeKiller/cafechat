@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.Date;
@@ -15,14 +16,19 @@ public class ChatListController implements Initializable {
 
     public ListView<MessageVO> chatListView;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        renderDebugDate();
         initializeUI();
         initializeEvent();
-        renderDebugDate();
     }
     public void initializeUI(){
+//        System.err.println(chatListView.getItems());
+
         chatListView.setCellFactory(f -> new ChatRowController());
+
     }
     public void initializeEvent(){
 
