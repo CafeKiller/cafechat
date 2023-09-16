@@ -1,6 +1,7 @@
 package com.cafe.fx.wx.view.chat;
 
 import com.cafe.fx.wx.constant.MessageSource;
+import com.cafe.fx.wx.core.FXAvatar;
 import com.cafe.fx.wx.vo.MessageVO;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -41,7 +42,11 @@ public class ChatRowController extends ListCell<MessageVO> {
          }
 
          if (item.getSource() == MessageSource.APPLY){
-
+            avatarImageView.setImage(FXAvatar.apply());
+            nicknameLabel.setText("新朋友");
+            messageLabel.setText(item.getNickname() + "申请添加你为好友.");
+         } else {
+//             avatarImageView.setImage(FXAvatar.);
          }
 
     }
