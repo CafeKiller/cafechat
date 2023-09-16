@@ -31,7 +31,7 @@ public class ChatListController implements Initializable {
     void renderDebugDate(){
 
         MessageVO chatMock = new MessageVO();
-        chatMock.setId(1L);
+        chatMock.setId(233L);
         chatMock.setNickname("ATX-wuying");
         chatMock.setMessage("HELLO HELLO HELLO");
         chatMock.setTimestamp(new Date().getTime());
@@ -39,7 +39,7 @@ public class ChatListController implements Initializable {
         chatListView.getItems().add(chatMock);
 
         MessageVO applyMock = new MessageVO();
-        applyMock.setId(2L);
+        applyMock.setId(322L);
         applyMock.setNickname("Coffee_Killer");
         applyMock.setTimestamp(new Date().getTime());
         applyMock.setSource(MessageSource.APPLY);

@@ -36,7 +36,7 @@ public class FXAvatar {
 
     // 默认的好友头图
     public static Image def(){
-        return cache.computeIfAbsent("user_def.png", FXAvatar::loadLocalAvatar);
+        return cache.computeIfAbsent("user_def.jpg", FXAvatar::loadLocalAvatar);
     }
 
 

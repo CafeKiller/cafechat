@@ -25,12 +25,14 @@ public class ChatRowController extends ListCell<MessageVO> {
 
     @Override
     protected void updateItem(MessageVO item, boolean empty) {
-        super.updateItem(item, empty);
+         super.updateItem(item, empty);
 
          if (empty || Objects.isNull(item)){
              setGraphic(null);
              return;
          }
+
+         System.err.println(item);
 
          if (Objects.isNull(fxmlLoader)){
              fxmlLoader = new FXMLLoader(getClass().getResource("/views/"+getClass().getSimpleName()+".fxml"));

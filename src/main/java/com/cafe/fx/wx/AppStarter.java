@@ -68,7 +68,14 @@ public class AppStarter {
         primaryStage.getScene().getStylesheets().addAll("/css/app.css");
         primaryStage.getIcons().clear();
         primaryStage.getIcons().add(FXIcon.logo());
+        primaryStage.setResizable(false);
+        primaryStage.show();
 
+
+        LoginStage loginStage = LoginStage.build();
+        FXContext.setLoginStage(loginStage);
+        // 展示login容器
+        loginStage.show();
 
     }
 

@@ -96,4 +96,17 @@ public class MessageVO {
     public void setAvtar(String avtar) {
         this.avtar.set(avtar);
     }
+
+    @Override
+    public String toString() {
+        return "MessageVO{" +
+                "id=" + id +
+                ", nickname=" + nickname +
+                ", avtar=" + avtar +
+                ", source=" + source +
+                ", message=" + message +
+                ", timestamp=" + timestamp +
+                ", messageCount=" + messageCount +
+                '}';
+    }
 }
