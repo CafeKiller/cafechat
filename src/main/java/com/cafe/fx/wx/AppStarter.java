@@ -42,12 +42,13 @@ public class AppStarter {
         // 设置窗口初始大小
         primaryStage.setWidth(640);
         primaryStage.setHeight(480);
+        primaryStage.show();
 
         LoginStage loginStage = LoginStage.build();
         FXContext.setLoginStage(loginStage);
 
         // 展示login容器
-        loginStage.show();
+        // loginStage.show();
 
     }
 
