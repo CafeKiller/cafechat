@@ -51,6 +51,7 @@ public class ChatRowController extends ListCell<MessageVO> {
              nicknameLabel.setText(item.getNickname());
              messageLabel.setText(item.getMessage());
          }
+
          timestampLabel.setText(new SimpleDateFormat("yy/MM/dd").format(item.getTimestamp()));
          messageCountLabel.setText(item.getMessageCount() >99 ? "99+" : String.valueOf(item.getMessageCount()));
          messageCountLabel.setLayoutX(item.getMessageCount() > 0 ? 35 : -35);

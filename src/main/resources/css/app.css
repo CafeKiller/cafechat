@@ -1,0 +1,77 @@
+* {
+    -fx-font-family: "微软雅黑", "sans-serif";
+    -fx-font-size: 14px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: #f4f4f4;
+    -fx-text-fill: black;
+}
+
+.list-cell:empty {
+    visibility: hidden;
+}
+
+.list-cell:hover {
+    -fx-background-color: derive(#c8c8c8, 50%);
+}
+
+.list-cell:filled:selected:focused {
+    -fx-background-color: #c8c8c8;
+    -fx-text-fill: black;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: transparent;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.track {
+    -fx-background-color: transparent;
+}
+
+.thumb {
+    -fx-pref-width: 10px;
+    -fx-background-color: derive(#969696, 50%);
+    -fx-background-radius: 0em;
+}
+
+.increment-arrow,
+.decrement-arrow {
+    -fx-padding: 0;
+}
+
+.increment-button,
+.decrement-button {
+    -fx-padding: 0 0 0 0;
+}
+
+.scroll-bar {
+    -fx-opacity: 0;
+}
+
+:hover .scroll-bar {
+    -fx-opacity: 1;
+}
+
+.list-view .scroll-bar,
+.text-area .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.list-view .decrement-button {
+    -fx-padding: 0 10 0 0;
+}

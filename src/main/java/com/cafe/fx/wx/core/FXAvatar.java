@@ -11,10 +11,12 @@ public class FXAvatar {
     private static final Map<String, Image> cache = new HashMap<>();
     public static int index = 2;
 
+    // 加载当前用户的头像
     static Image loadLocalAvatar(String filename){
         return  new Image(Objects.requireNonNull(FXIcon.class.getResourceAsStream("/avatar/"+filename)));
     }
 
+    // 加载用户头像
     public static Image load(String url){
         try{
             return new Image(url);
@@ -26,10 +28,13 @@ public class FXAvatar {
         }
 
     }
+
+    // 好友添加的头图
     public static Image apply(){
         return cache.computeIfAbsent("apply.png", FXAvatar::loadLocalAvatar);
     }
 
+    // 默认的好友头图
     public static Image def(){
         return cache.computeIfAbsent("user_def.png", FXAvatar::loadLocalAvatar);
     }

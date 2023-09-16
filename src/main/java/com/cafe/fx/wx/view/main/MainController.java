@@ -1,5 +1,6 @@
 package com.cafe.fx.wx.view.main;
 
+import com.cafe.fx.wx.core.FXAvatar;
 import com.cafe.fx.wx.core.FXComponent;
 import com.cafe.fx.wx.core.FXContext;
 import javafx.event.ActionEvent;
@@ -33,10 +34,13 @@ public class MainController implements Initializable {
 
     /* 初始化UI */
     void initializeUI(){
+        avatarImageView.setImage(FXAvatar.def());
+
         // 创建左边菜单栏分组, 并绑定上对应事件
         ToggleGroup leftMenuToggleGroup = new ToggleGroup();
         chatButton.setToggleGroup(leftMenuToggleGroup);
         contactsButton.setToggleGroup(leftMenuToggleGroup);
+
         onChatClick(null);
     }
 
@@ -55,6 +59,8 @@ public class MainController implements Initializable {
     public void onContactsClick(ActionEvent actionEvent){
         listVBox.getChildren().clear();
         listVBox.getChildren().add(FXComponent.contactsListController());
+        contactsButton.setDisable(true);
+        chatButton.setDisable(false);
     }
     /* 自定最小化事件 */
     public void onMinimizeClick(ActionEvent actionEvent){

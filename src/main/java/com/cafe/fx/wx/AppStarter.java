@@ -17,12 +17,17 @@ import javafx.stage.StageStyle;
 /* 应用启动类 */
 public class AppStarter {
 
-    public static void start(Stage primaryStage){
+    /*
+        [old start]
+        timer: 2023年9月16日21:05:29
+        processor: Coffee_Killer
+    */
+    /*public static void start(Stage primaryStage){
         FXContext.setPrimaryStage(primaryStage);
 
-        /* 测试登录: 临时设置一个主页 并设置临时文字 */
-       /* BorderPane root = new BorderPane();
-        root.setCenter(new Label("Cafe Chat"));*/
+        *//* 测试登录: 临时设置一个主页 并设置临时文字 *//*
+       *//* BorderPane root = new BorderPane();
+        root.setCenter(new Label("Cafe Chat"));*//*
 
         Parent root = FX.fxml(MainController.class);
         FX.drag(primaryStage, root);
@@ -49,6 +54,21 @@ public class AppStarter {
 
         // 展示login容器
         // loginStage.show();
+
+    }*/
+
+    public static void start(Stage primaryStage){
+
+        FXContext.setPrimaryStage(primaryStage);
+
+        Parent root = FX.fxml(MainController.class);
+        FX.drag(primaryStage, root);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.getScene().getStylesheets().addAll("/css/app.css");
+        primaryStage.getIcons().clear();
+        primaryStage.getIcons().add(FXIcon.logo());
+
 
     }
 

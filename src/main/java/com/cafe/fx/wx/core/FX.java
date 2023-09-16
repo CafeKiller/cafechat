@@ -27,6 +27,7 @@ public class FX {
         }
     }
 
+    /* 窗口拖动函数 */
     public static void drag(Stage stage, Parent root){
         EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
             private double offsetX= 0;
@@ -66,15 +67,17 @@ public class FX {
 
     }
 
+    /* 弹窗 错误提示 */
     public static void error(String message){
         error(message,FXContext.getPrimaryStage());
     }
 
-    public static void error(String message, Stage stage){
+    public static void error(String message, Stage owner){
         Alert alert = new Alert(Alert.AlertType.ERROR, message);
         alert.setGraphic(null);
         alert.setHeaderText(null);
         alert.setTitle("错误");
+        alert.initOwner(owner);
         alert.show();
     }
 
