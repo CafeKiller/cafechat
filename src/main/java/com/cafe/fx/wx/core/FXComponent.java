@@ -1,6 +1,7 @@
 package com.cafe.fx.wx.core;
 
 import com.cafe.fx.wx.view.chat.ChatListController;
+import com.cafe.fx.wx.view.contacts.ContactsListController;
 import com.cafe.fx.wx.view.login.LoginController;
 import com.cafe.fx.wx.view.register.RegisterController;
 import javafx.scene.Parent;
@@ -28,6 +29,6 @@ public class FXComponent {
     }
 
     public static Parent contactsListController(){
-        return cache.computeIfAbsent("contactsListController",k -> new Label("好友列表"));
+        return cache.computeIfAbsent("contactsListController",k -> FX.fxml(ContactsListController.class));
     }
 }
