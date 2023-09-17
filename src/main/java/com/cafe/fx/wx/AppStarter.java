@@ -75,7 +75,7 @@ public class AppStarter {
         LoginStage loginStage = LoginStage.build();
         FXContext.setLoginStage(loginStage);
         // 展示login容器
-        loginStage.show();
+        // loginStage.show();
 
     }
 

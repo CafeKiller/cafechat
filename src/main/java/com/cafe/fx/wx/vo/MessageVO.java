@@ -1,12 +1,17 @@
 package com.cafe.fx.wx.vo;
 
-import javafx.beans.property.*;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.LongProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 public class MessageVO {
 
     private final LongProperty id = new SimpleLongProperty();
     private final StringProperty nickname = new SimpleStringProperty();
-    private final StringProperty avtar = new SimpleStringProperty();
+    private final StringProperty avatar = new SimpleStringProperty();
     private final IntegerProperty source = new SimpleIntegerProperty();
     private final StringProperty message = new SimpleStringProperty();
     private final LongProperty timestamp = new SimpleLongProperty();
@@ -85,16 +90,16 @@ public class MessageVO {
         this.messageCount.set(messageCount);
     }
 
-    public String getAvtar() {
-        return avtar.get();
+    public String getAvatar() {
+        return avatar.get();
     }
 
     public StringProperty avtarProperty() {
-        return avtar;
+        return avatar;
     }
 
     public void setAvtar(String avtar) {
-        this.avtar.set(avtar);
+        this.avatar.set(avtar);
     }
 
     @Override
@@ -102,7 +107,7 @@ public class MessageVO {
         return "MessageVO{" +
                 "id=" + id +
                 ", nickname=" + nickname +
-                ", avtar=" + avtar +
+                ", avtar=" + avatar +
                 ", source=" + source +
                 ", message=" + message +
                 ", timestamp=" + timestamp +

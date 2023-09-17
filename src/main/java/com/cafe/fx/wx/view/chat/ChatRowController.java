@@ -11,11 +11,12 @@ import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Objects;
 
 public class ChatRowController extends ListCell<MessageVO> {
 
-    public HBox chatRowBox;
+    public HBox chatRowHBox;
     public ImageView avatarImageView;
     public Label nicknameLabel;
     public Label messageLabel;
@@ -47,15 +48,15 @@ public class ChatRowController extends ListCell<MessageVO> {
             nicknameLabel.setText("新朋友");
             messageLabel.setText(item.getNickname() + "申请添加你为好友.");
          } else {
-             avatarImageView.setImage(FXAvatar.load(item.getAvtar()));
+             avatarImageView.setImage(FXAvatar.load(item.getAvatar()));
              nicknameLabel.setText(item.getNickname());
              messageLabel.setText(item.getMessage());
          }
 
-         timestampLabel.setText(new SimpleDateFormat("yy/MM/dd").format(item.getTimestamp()));
+         timestampLabel.setText(new SimpleDateFormat("yy/MM/dd").format(new Date(item.getTimestamp())));
          messageCountLabel.setText(item.getMessageCount() >99 ? "99+" : String.valueOf(item.getMessageCount()));
          messageCountLabel.setLayoutX(item.getMessageCount() > 0 ? 35 : -35);
-         setGraphic(chatRowBox);
+         setGraphic(chatRowHBox);
     }
 
 }
