@@ -19,8 +19,6 @@ public class ChatListController implements Initializable {
 
     public ListView<MessageVO> chatListView;
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         renderDebugDate();
@@ -33,6 +31,8 @@ public class ChatListController implements Initializable {
         chatListView.setCellFactory(f -> new ChatRowController());
 
     }
+
+    /* 初始化页面事件 */
     public void initializeEvent(){
         chatListView.getSelectionModel().selectedItemProperty().addListener(
                 (obj, ov, nv)->{
@@ -44,6 +44,7 @@ public class ChatListController implements Initializable {
                 });
     }
 
+    /* 添加 测试数据 */
     void renderDebugDate(){
 
         MessageVO chatMock = new MessageVO();
