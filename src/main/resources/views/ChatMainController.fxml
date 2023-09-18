@@ -7,7 +7,7 @@
 <StackPane prefHeight="610.0"
            prefWidth="546.0" stylesheets="@/css/ChatMainController.css"
            xmlns:fx="http://javafx.com/fxml"
-           fx:controller="michong.javafx.wx.view.chat.ChatMainController">
+           fx:controller="com.cafe.fx.wx.view.chat.ChatMainController">
     <SplitPane dividerPositions="0.65" orientation="VERTICAL" styleClass="chat-main-pane">
         <items>
             <VBox>
