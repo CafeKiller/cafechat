@@ -1,15 +1,18 @@
 package com.cafe.fx.wx.view.chat;
 
 import com.cafe.fx.wx.constant.MessageSource;
+import com.cafe.fx.wx.core.FXComponent;
 import com.cafe.fx.wx.vo.MessageVO;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.Pane;
 import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.Date;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ChatListController implements Initializable {
@@ -31,7 +34,14 @@ public class ChatListController implements Initializable {
 
     }
     public void initializeEvent(){
-
+        chatListView.getSelectionModel().selectedItemProperty().addListener(
+                (obj, ov, nv)->{
+                    if (Objects.nonNull(nv)){
+                        Pane main = FXComponent.mainComponent();
+                        main.getChildren().clear();
+                        main.getChildren().add(FXComponent.chatMainComponent(nv.getId()));
+                    }
+                });
     }
 
     void renderDebugDate(){

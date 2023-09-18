@@ -1,6 +1,7 @@
 package com.cafe.fx.wx.core;
 
 import com.cafe.fx.wx.view.chat.ChatListController;
+import com.cafe.fx.wx.view.chat.ChatMainController;
 import com.cafe.fx.wx.view.contacts.ContactsListController;
 import com.cafe.fx.wx.view.contacts.ContactsProfileController;
 import com.cafe.fx.wx.view.login.LoginController;
@@ -42,7 +43,7 @@ public class FXComponent {
         return FX.fxml(ContactsProfileController.class, id);
     }
 
-    /*public static Parent chatMainComponent(Long id){
-        return FX.fxml()
-    }*/
+    public static Parent chatMainComponent(Long id){
+        return FX.fxml(ChatMainController.class, id);
+    }
 }
