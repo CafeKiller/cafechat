@@ -1,0 +1,103 @@
+.chat-main-pane {
+    -fx-background-color: #fafafa;
+    -fx-border-color: transparent;
+}
+
+.chat-main-pane .button {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-background-size: 30px 30px;
+}
+
+.chat-main-menu {
+    -fx-background-color: #fafafa;
+}
+
+.name-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: black;
+}
+
+.chat-main-menu-more {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 44px;
+    -fx-pref-height: 30px;
+    -fx-background-size: 44px 30px;
+    -fx-background-image: url("/icon/more.png");
+}
+.chat-main-menu-item {
+    -fx-padding: 5 0 5 5;
+}
+.chat-main-menu-item:hover,
+.chat-main-menu-item:focused {
+    -fx-cursor: hand;
+    -fx-background-color: #dbd9d8;
+}
+.chat-main-menu-item:hover .label,
+.chat-main-menu-item:focused .label {
+    -fx-text-fill: black;
+}
+
+.separator .line {
+    -fx-border-color: derive(#eee9e9, 20%);
+    -fx-border-width: 1;
+}
+
+.chat-main-input > * {
+    -fx-background-color: #ffffff;
+}
+
+.face-button {
+    -fx-background-image: url("/icon/face_0.png");
+}
+.face-button:hover {
+    -fx-background-image: url("/icon/face_1.png");
+}
+.message-button {
+    -fx-background-image: url("/icon/message_0.png");
+}
+.message-button:hover {
+    -fx-background-image: url("/icon/message_1.png");
+}
+.audio-button {
+    -fx-background-image: url("/icon/audio_0.png");
+}
+.audio-button:hover {
+    -fx-background-image: url("/icon/audio_0.png");
+}
+.video-button {
+    -fx-background-image: url("/icon/video_0.png");
+}
+.video-button:hover {
+    -fx-background-image: url("/icon/video_0.png");
+}
+
+.send-button {
+    -fx-padding: 5px 10px;
+    -fx-font-size: 12px;
+    -fx-background-color: #f5f5f5;
+}
+.send-button:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #5cb85c;
+    -fx-border-color: #4cae4c;
+}
+.text-area {
+    -fx-font-size: 14px;
+    -fx-padding: 0;
+    -fx-cursor: default;
+    -fx-background-color: #ffffff;
+}
+.text-area .content {
+    -fx-cursor: text;
+    -fx-background-color: #ffffff;
+}
+.text-area:focused .content {
+    -fx-background-color: #ffffff;
+}

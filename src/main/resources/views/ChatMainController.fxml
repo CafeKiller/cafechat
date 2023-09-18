@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+<StackPane prefHeight="610.0"
+           prefWidth="546.0" stylesheets="@/css/ChatMainController.css"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="michong.javafx.wx.view.chat.ChatMainController">
+    <SplitPane dividerPositions="0.65" orientation="VERTICAL" styleClass="chat-main-pane">
+        <items>
+            <VBox>
+                <children>
+                    <HBox alignment="CENTER" prefHeight="40.0" styleClass="chat-main-menu">
+                        <children>
+                            <Label fx:id="nicknameLabel" styleClass="name-label"/>
+                            <Pane HBox.hgrow="ALWAYS"/>
+                            <MenuButton styleClass="chat-main-menu-more">
+                                <items>
+                                    <MenuItem text="清空" styleClass="chat-main-menu-item" onAction="#onClearClick"/>
+                                    <MenuItem text="关闭" styleClass="chat-main-menu-item" onAction="#onCloseClick"/>
+                                </items>
+                            </MenuButton>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" right="5.0"/>
+                        </padding>
+                    </HBox>
+                    <Separator styleClass="wx-separator"/>
+                    <!--<Pane VBox.vgrow="ALWAYS"/>-->
+                    <WebView fx:id="chatWebView" VBox.vgrow="ALWAYS"/>
+                </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" styleClass="chat-main-input">
+                <children>
+                    <HBox spacing="10.0">
+                        <children>
+                            <Button styleClass="face-button"/>
+                            <Button styleClass="message-button"/>
+                            <Pane HBox.hgrow="ALWAYS"/>
+                            <Button styleClass="audio-button"/>
+                            <Button styleClass="video-button"/>
+                        </children>
+                        <padding>
+                            <Insets bottom="5.0" left="20.0" right="20.0" top="5.0"/>
+                        </padding>
+                    </HBox>
+                    <StackPane VBox.vgrow="ALWAYS">
+                        <children>
+                            <TextArea fx:id="messageTextArea" wrapText="true"/>
+                        </children>
+                        <padding>
+                            <Insets bottom="5.0" left="20.0" right="20.0" top="5.0"/>
+                        </padding>
+                    </StackPane>
+                    <ButtonBar prefHeight="80.0">
+                        <buttons>
+                            <Button styleClass="wx-btn-send" text="发送(S)" onAction="#onSendClick"/>
+                        </buttons>
+                        <padding>
+                            <Insets bottom="5.0" right="20.0" top="5.0"/>
+                        </padding>
+                    </ButtonBar>
+                </children>
+            </VBox>
+        </items>
+    </SplitPane>
+</StackPane>
