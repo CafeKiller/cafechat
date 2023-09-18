@@ -2,10 +2,12 @@ package com.cafe.fx.wx.core;
 
 import com.cafe.fx.wx.view.chat.ChatListController;
 import com.cafe.fx.wx.view.contacts.ContactsListController;
+import com.cafe.fx.wx.view.contacts.ContactsProfileController;
 import com.cafe.fx.wx.view.login.LoginController;
 import com.cafe.fx.wx.view.register.RegisterController;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,4 +33,16 @@ public class FXComponent {
     public static Parent contactsListController(){
         return cache.computeIfAbsent("contactsListController",k -> FX.fxml(ContactsListController.class));
     }
+
+    public static Pane mainComponent(){
+        return  (Pane)cache.computeIfAbsent("mainComponent",k -> (Parent) FXContext.getPrimaryStage().getScene().lookup("#mainPane"));
+    }
+
+    public static Parent contactsProfileComponent(Long id){
+        return FX.fxml(ContactsProfileController.class, id);
+    }
+
+    /*public static Parent chatMainComponent(Long id){
+        return FX.fxml()
+    }*/
 }

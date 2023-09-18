@@ -1,11 +1,14 @@
 package com.cafe.fx.wx.view.contacts;
 
+import com.cafe.fx.wx.core.FXComponent;
 import com.cafe.fx.wx.vo.ContactsVO;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.Pane;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ContactsListController implements Initializable {
@@ -24,7 +27,15 @@ public class ContactsListController implements Initializable {
     }
 
     void initializeEvent(){
-
+        contactsListView.getSelectionModel().selectedItemProperty().addListener(
+                (obj, ov, nv)->{
+                    if (Objects.nonNull(nv)){
+                        Pane main = FXComponent.mainComponent();
+                        main.getChildren().clear();
+                        main.getChildren().add(FXComponent.contactsProfileComponent(nv.getId()));
+                    }
+                }
+        );
     }
 
     void renderDebugDate(){

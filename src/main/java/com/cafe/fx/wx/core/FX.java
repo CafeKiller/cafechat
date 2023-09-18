@@ -1,5 +1,6 @@
 package com.cafe.fx.wx.core;
 
+import com.cafe.fx.wx.view.UserDataController;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,6 +21,19 @@ public class FX {
         String uri = "/views/" + controller.getSimpleName() + ".fxml";
         try{
             return FXMLLoader.load(Objects.requireNonNull(controller.getResource(uri)));
+        }catch (IOException e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static Parent fxml(Class<? extends UserDataController> controller, Object date){
+        String uri = "/views/" + controller.getSimpleName() + ".fxml";
+        try{
+            FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(controller.getResource(uri)));
+            Parent root = loader.load();
+            UserDataController ctrl = loader.getController();
+            ctrl.initialize(date);
+            return root;
         }catch (IOException e){
             throw new RuntimeException(e);
         }
