@@ -3,9 +3,13 @@ package com.cafe.fx.wx.view.chat;
 import com.cafe.fx.wx.html.Html;
 import com.cafe.fx.wx.view.UserDataController;
 import com.cafe.fx.wx.vo.MessageVO;
+import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.effect.BlendMode;
+import javafx.scene.input.KeyCode;
+import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import netscape.javascript.JSObject;
 
@@ -29,10 +33,23 @@ public class ChatMainController implements UserDataController {
     }
 
     void initializeUI(){
-
+        chatWebView.setContextMenuEnabled(false);
+        chatWebView.setBlendMode(BlendMode.DARKEN);
+        WebEngine engine = chatWebView.getEngine();
+        engine.setJavaScriptEnabled(true);
+        engine.getLoadWorker().stateProperty().addListener((obj, ov, nv)->{
+            if (nv == Worker.State.SUCCEEDED){
+                js = (JSObject)engine.executeScript("window.main");
+                renderDebugDate();
+            }
+        });
     }
     void initializeEvent(){
-
+        messageTextArea.setOnKeyPressed(event -> {
+            if (event.isControlDown() && event.getCode() == KeyCode.ENTER){
+                onSendClick(null);
+            }
+        });
     }
     void renderDebugDate(){
         nicknameLabel.setText("WxID: " + contactsId);
