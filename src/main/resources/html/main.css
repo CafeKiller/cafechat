@@ -1,0 +1,18 @@
+#content {
+    padding: 15px;
+}
+.message-item {
+    padding: 5px 0;
+}
+.nickname {
+    margin-right: 8px;
+}
+.user {
+    color: green;
+}
+.contacts {
+    color: blue;
+}
+.content {
+    padding: 5px 0;
+}
