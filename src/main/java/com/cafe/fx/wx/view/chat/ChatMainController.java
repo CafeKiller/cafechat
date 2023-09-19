@@ -14,6 +14,7 @@ import javafx.scene.web.WebView;
 import netscape.javascript.JSObject;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class ChatMainController implements UserDataController {
 
@@ -43,6 +44,7 @@ public class ChatMainController implements UserDataController {
                 renderDebugDate();
             }
         });
+        engine.load(Objects.requireNonNull(getClass().getResource("/html/main.html")).toExternalForm());
     }
     void initializeEvent(){
         messageTextArea.setOnKeyPressed(event -> {
