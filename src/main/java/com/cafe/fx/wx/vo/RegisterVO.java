@@ -3,7 +3,7 @@ package com.cafe.fx.wx.vo;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class RegisterVo {
+public class RegisterVO {
 
     private final StringProperty nickname = new SimpleStringProperty("");
     private final StringProperty username = new SimpleStringProperty("");

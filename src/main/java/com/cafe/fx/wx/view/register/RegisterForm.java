@@ -1,6 +1,6 @@
 package com.cafe.fx.wx.view.register;
 
-import com.cafe.fx.wx.vo.RegisterVo;
+import com.cafe.fx.wx.vo.RegisterVO;
 import com.dlsc.formsfx.model.structure.Field;
 import com.dlsc.formsfx.model.structure.Form;
 import com.dlsc.formsfx.model.structure.Group;
@@ -10,7 +10,7 @@ import com.dlsc.formsfx.view.renderer.FormRenderer;
 /* 注册表单构建 */
 public class RegisterForm {
 
-    private final RegisterVo vo = new RegisterVo();
+    private final RegisterVO vo = new RegisterVO();
     private Form form;
     private FormRenderer renderer;
 
@@ -60,7 +60,7 @@ public class RegisterForm {
         renderer = new FormRenderer(form);
     }
 
-    public RegisterVo getVo() {
+    public RegisterVO getVo() {
         return vo;
     }
 

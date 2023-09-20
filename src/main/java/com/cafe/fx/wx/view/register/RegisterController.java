@@ -3,6 +3,10 @@ package com.cafe.fx.wx.view.register;
 import com.cafe.fx.wx.core.FX;
 import com.cafe.fx.wx.core.FXComponent;
 import com.cafe.fx.wx.core.FXContext;
+import com.cafe.fx.wx.event.Event;
+import com.cafe.fx.wx.event.EventDispatcher;
+import com.cafe.fx.wx.event.data.RegisterDTO;
+import com.cafe.fx.wx.vo.RegisterVO;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -32,7 +36,11 @@ public class RegisterController implements Initializable {
 
     /* 初始化事件 */
     void initializeEvent(){
-
+        EventDispatcher.register(Event.REGISTER, data ->{
+            RegisterDTO r = (RegisterDTO) data;
+            FX.info(r.getUsername() + "注册成功", FXContext.getLoginStage());
+            onLoginClick(null);
+        }, FXContext.getLoginStage());
     }
 
     /* 点击登录事件 */
@@ -49,8 +57,10 @@ public class RegisterController implements Initializable {
 
         // 判断表单中的值是否有效且合法
         if (form.getForm().isValid()){
-            FX.info(form.getVo().getUsername() +"注册成功, 欢迎欢迎", FXContext.getLoginStage());
-            onLoginClick(actionEvent);
+            /*FX.info(form.getVo().getUsername() +"注册成功, 欢迎欢迎", FXContext.getLoginStage());
+            onLoginClick(actionEvent);*/
+            RegisterVO r = form.getVo();
+            FXContext.getCaller().register(r.getNickname(), r.getUsername(), r.getPassword());
         }
     }
 
