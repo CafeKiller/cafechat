@@ -57,7 +57,7 @@ public class AppStarter {
 
     }*/
 
-    public static void start(Stage primaryStage){
+    /*public static void start(Stage primaryStage){
 
         FXContext.setPrimaryStage(primaryStage);
 
@@ -77,6 +77,27 @@ public class AppStarter {
         // 展示login容器
         // loginStage.show();
 
+    }*/
+    public static void start(Stage primaryStage){
+
+        // FXContext.setCaller(new );
+        FXContext.setPrimaryStage(primaryStage);
+
+        Parent root = FX.fxml(MainController.class);
+        FX.drag(primaryStage, root);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.getScene().getStylesheets().addAll("/css/app.css");
+        primaryStage.getIcons().clear();
+        primaryStage.getIcons().add(FXIcon.logo());
+        primaryStage.setResizable(false);
+        primaryStage.show();
+
+
+        LoginStage loginStage = LoginStage.build();
+        FXContext.setLoginStage(loginStage);
+        // 展示login容器
+         loginStage.show();
     }
 
 }
