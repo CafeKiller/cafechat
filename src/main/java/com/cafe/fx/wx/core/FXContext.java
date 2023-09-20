@@ -1,5 +1,6 @@
 package com.cafe.fx.wx.core;
 
+import com.cafe.fx.wx.caller.Caller;
 import com.cafe.fx.wx.view.login.LoginStage;
 import javafx.stage.Stage;
 
@@ -22,6 +23,7 @@ public class FXContext {
     interface K {
         String PRIMARY_STAGE = "PRIMARY_STAGE";
         String LOGIN_STAGE = "LOGIN_STAGE";
+        String CALLER = "CALLER";
     }
 
     public static Stage getPrimaryStage(){
@@ -38,6 +40,13 @@ public class FXContext {
 
     public static void setLoginStage(LoginStage loginStage){
         put(K.LOGIN_STAGE, loginStage);
+    }
+
+    public static Caller getCaller(){
+        return get(K.CALLER);
+    }
+    public static void setCaller(Caller caller){
+        put(K.CALLER, caller);
     }
 
 }
