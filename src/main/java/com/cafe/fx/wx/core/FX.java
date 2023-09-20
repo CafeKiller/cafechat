@@ -69,13 +69,8 @@ public class FX {
 
     /* 弹窗 提示信息 */
     public static void info(String message, Stage owner){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
 
-        alert.setGraphic(null);
-        alert.setHeaderText(null);
-        alert.setTitle("提示");
-        alert.initOwner(owner);
-        alert.show();
+        alert("提示", message, Alert.AlertType.INFORMATION, owner);
 
     }
 
@@ -85,10 +80,14 @@ public class FX {
     }
 
     public static void error(String message, Stage owner){
-        Alert alert = new Alert(Alert.AlertType.ERROR, message);
+        alert("错误", message, Alert.AlertType.ERROR, owner);
+    }
+
+    public static void alert(String title, String message, Alert.AlertType type, Stage owner){
+        Alert alert = new Alert(type, message);
         alert.setGraphic(null);
         alert.setHeaderText(null);
-        alert.setTitle("错误");
+        alert.setTitle(title);
         alert.initOwner(owner);
         alert.show();
     }
