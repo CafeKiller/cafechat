@@ -1,6 +1,7 @@
 package com.cafe.fx.wx;
 
 
+import com.cafe.fx.wx.caller.debug.DebugCaller;
 import com.cafe.fx.wx.core.FX;
 import com.cafe.fx.wx.core.FXContext;
 import com.cafe.fx.wx.core.FXIcon;
@@ -80,24 +81,25 @@ public class AppStarter {
     }*/
     public static void start(Stage primaryStage){
 
-        // FXContext.setCaller(new );
+        FXContext.setCaller(new DebugCaller());
         FXContext.setPrimaryStage(primaryStage);
 
         Parent root = FX.fxml(MainController.class);
         FX.drag(primaryStage, root);
+
         primaryStage.setScene(new Scene(root));
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.getScene().getStylesheets().addAll("/css/app.css");
         primaryStage.getIcons().clear();
         primaryStage.getIcons().add(FXIcon.logo());
         primaryStage.setResizable(false);
-        primaryStage.show();
+        // primaryStage.show();
 
 
         LoginStage loginStage = LoginStage.build();
         FXContext.setLoginStage(loginStage);
         // 展示login容器
-         loginStage.show();
+        loginStage.show();
     }
 
 }
