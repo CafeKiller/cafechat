@@ -26,6 +26,7 @@ public class FX {
         }
     }
 
+    /* 加载fxml文件, 并同时完成数据初始化 */
     public static Parent fxml(Class<? extends UserDataController> controller, Object date){
         String uri = "/views/" + controller.getSimpleName() + ".fxml";
         try{
@@ -83,6 +84,7 @@ public class FX {
         alert("错误", message, Alert.AlertType.ERROR, owner);
     }
 
+    /* alert弹窗 */
     public static void alert(String title, String message, Alert.AlertType type, Stage owner){
         Alert alert = new Alert(type, message);
         alert.setGraphic(null);
